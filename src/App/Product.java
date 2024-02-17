@@ -23,9 +23,9 @@ public class Product {
         return this.quantity;
     }
 
+    @Override
     public String toString() {
-        return String.format("Product: %s, Price: %.2f, Quantity: %d", name, quantity, price);
-
-
+        return String.format("Product: %s, Price: %.2f, Quantity: %d", this.name, this.price, this.quantity);
     }
 }
+

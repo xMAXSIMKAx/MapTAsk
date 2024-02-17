@@ -15,11 +15,12 @@ public class ProductManager {
         System.out.println("Enter product id: ");
         int id = scanner.nextInt();
         Product product = products.get(id);
-        if (product!= null) {
+        if (product != null) {
             System.out.println("Product details: ");
             System.out.println(product);
-    }else {
-        System.out.println("Invalid product id"+ id);}
+        } else {
+            System.out.println("Invalid product id" + id);
+        }
     }
 
 }
