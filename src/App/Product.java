@@ -11,21 +11,8 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public double getPrice() {
-        return this.price;
-    }
-
-    public int getQuantity() {
-        return this.quantity;
-    }
-
     @Override
     public String toString() {
-        return String.format("Product: %s, Price: %.2f, Quantity: %d", this.name, this.price, this.quantity);
+        return String.format("Product: %s, Price: %.2f, Quantity: %d", name, price, quantity);
     }
 }
-

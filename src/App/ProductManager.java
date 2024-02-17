@@ -5,12 +5,20 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ProductManager {
-    public static void processProducts() {
-        Map<Integer, Product> products = new HashMap<>();
-        products.put(1, new Product("Aplle", 10, 10));
-        products.put(2, new Product("Orange", 20, 20));
-        products.put(3, new Product("Peach", 30, 30));
-        products.put(4, new Product("Kiwi", 40, 40));
+    private Map<Integer, Product> products;
+
+    public ProductManager() {
+        this.products = ProductProvider.getProducts();
+    }
+
+    public void showAllProducts() {
+        System.out.println("Available products:");
+        for (Map.Entry<Integer, Product> entry : products.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
+    public void processProducts() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter product id: ");
         int id = scanner.nextInt();
@@ -22,5 +30,4 @@ public class ProductManager {
             System.out.println("Invalid product id" + id);
         }
     }
-
 }
